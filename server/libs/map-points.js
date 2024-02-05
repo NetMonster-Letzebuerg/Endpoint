@@ -1,40 +1,40 @@
 // mapa-points.js
 import { readFile } from 'fs/promises';
 import { join, dirname } from 'path';
-import { fileURLToPath } from 'url'; // Adicionado import
+import { fileURLToPath } from 'url'; // Import
 
-// Use fileURLToPath para converter import.meta.url para um caminho
+// Utilise fileURLToPath pour convertir import.meta.url en chemin d'accès
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Função para obter dados brutos do mapa a partir de um arquivo local
+// Fonction permettant d'obtenir des données cartographiques brutes à partir d'un fichier local
 const getRawMapData = async (networkCode) => {
-    const fileName = `${networkCode}-268.ntm`;
+    const fileName = `${networkCode}-270.ntm`; //270 --> Luxembourg
     const rawDataPath = join(__dirname, 'public', 'database', fileName);
 
     try {
-        // Leia o conteúdo do arquivo
+        // Lire le contenu du fichier
         const data = await readFile(rawDataPath, 'utf-8');
-        // Supondo que o conteúdo do arquivo contém os dados brutos do mapa
-        return data.split('\n').filter(line => line.trim() !== '');  // Remove linhas em branco
+        // En supposant que le contenu du fichier contienne les données cartographiques brutes
+        return data.split('\n').filter(line => line.trim() !== '');  // Supprimer les lignes vides
     } catch (error) {
         console.error(`Erro ao obter dados brutos do mapa para ${networkCode}:`, error);
         throw error;
     }
 };
 
-// Função principal para obter dados formatados do mapa
+// Fonction principale d'obtention de données cartographiques formatées
 export async function getAllDataForMap() {
-    const networkCodes = ['01', '02', '03', '06']; // Códigos de rede para VDF, DIGI, NOS, MEO
+    const networkCodes = ['01', '05', '77', '06']; // Code pour POST, LOL, Tago, Orange
 
     try {
         const allMappedData = [];
 
-        // Itera sobre cada código de rede
+        // Itère sur chaque code de réseau
         for (const networkCode of networkCodes) {
             const rawMapData = await getRawMapData(networkCode);
 
-            // Faça o mapeamento para o formato desejado
+            // Convertie dans le format vouly
             const mappedData = rawMapData.map((point) => {
                 const fields = point.split(';');
 

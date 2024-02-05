@@ -8,7 +8,7 @@ import { getAllDataForMap } from "../libs/map-points.js"; // Corrected import st
 
 // Função para obter dados brutos do mapa a partir de um arquivo local
 const getRawMapData = async (networkCode) => {
-	const fileName = `${networkCode}-268.ntm`;
+	const fileName = `${networkCode}-270.ntm`; // LU
 	const rawDataPath = join(__dirname, "public", "database", fileName);
 
 	try {
@@ -27,7 +27,7 @@ const getRawMapData = async (networkCode) => {
 
 // Função principal para obter dados formatados do mapa
 export const getAllDataForMapFromNetworkCodes = async () => {
-	const networkCodes = ["01", "02", "03", "06"]; // Códigos de rede para VDF, DIGI, NOS, MEO
+	const networkCodes = ['01', '05', '77', '06']; // Code pour POST, LOL, Tago, Orange
 
 	try {
 		const allMappedData = [];
