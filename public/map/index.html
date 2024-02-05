@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa</title>
+    <title>Map des antenne relais Luxembourgeoise</title>
     <!-- Inclua as folhas de estilo e scripts do Leaflet aqui -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -22,7 +22,7 @@
 
     <script>
         // Inicializar o mapa
-        var map = L.map('map').setView([38.736946, -9.142685], 9);
+        var map = L.map('map').setView([49.8164, 6.09284], 10);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
         // Função para carregar pontos da API
