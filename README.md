@@ -35,6 +35,39 @@ NetMonster Luxembourg gère la collecte et le traitement des données de localis
    - Systéme d'affichage des statistique pour chaque opérateur.
    - Permet d'accéder aux bases de données de chaque opérateur Luxembourgeois.
 
+[LU]
+
+# Netmonster Lëtzebuerg - Endpoint
+
+Baséiert op Luis Baker System - Netmonster Poutugal
+
+**Vereinfacht Beschreiwung:**
+
+Netmonster Lëtzebuerg geréiert d'Sammlung an d'Veraarbechtung vu Standortdaten vun den mobilen Antennen vun de véier nationalen Opérateuren. De System enthält :
+
+**Funktionalitéit:**
+
+1. **Reegelméissegen Datebankupdate.**
+   - Datebank Update dateie ginn a reegelméissegen intervalle publizéiert
+
+2. **Standortdaten schécken:**
+   - D'Benotzer schécken informatioun vum Netmonster an JSON Formater iwwer den Endpunkt
+
+3. **Datebankintegratioun**
+   - Erliichtert d'Intergratioun an d'Datenbanken vun all Bedreiwer
+
+4. **Bäitrag Informatiounen:**
+   - Deeglech statistiken iwwer Contributiounen.
+   - Spuert déi meescht benotzt Smartphone Modeller no Mark.
+
+**Registréiert Modeller vun Operadoras:**
+   - Erfaasst a registréiert déi meescht benotzt Smartphone modeller vun all bedreiwer.
+   - D'Statistik enthält folgend Bedreiwer : POST, Orange LU, Tango (Proximus Lëtzebuerg), LOL (Luxembourg Online).
+
+**Frontend:**
+   - Statistik Display system fir all bedreiwer
+   - Erlaabt Zougang zu den Datenbanken vun all Lëtzebuerger Bedreiwer
+
 # Project Setup and Start Guide
 
 ## Prerequisites
